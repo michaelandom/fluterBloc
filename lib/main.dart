@@ -18,6 +18,11 @@ class MyApp extends StatefulWidget {
 
 class _MyAppState extends State<MyApp> {
   CounterCubit counterCubit = CounterCubit();
+  @override
+  void dispose() {
+    counterCubit.close();
+    super.dispose();
+  }
 
   @override
   Widget build(BuildContext context) {
