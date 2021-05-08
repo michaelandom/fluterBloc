@@ -1,8 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_block/logic/cubit/counter_cubit.dart';
-import 'package:flutter_block/presentation/screens/second_screen.dart';
-import 'package:flutter_block/presentation/screens/third_screen.dart';
 
 class HomeScreen extends StatefulWidget {
   HomeScreen({Key key, this.title, this.colors}) : super(key: key);
@@ -88,12 +86,7 @@ class _HomeScreenState extends State<HomeScreen> {
             // ),
             ElevatedButton(
               onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (_) => BlocProvider.value(
-                          value: BlocProvider.of<CounterCubit>(context),
-                          child: ScreenScreen(
-                              title: "Screen Screen", colors: Colors.blue),
-                        )));
+                Navigator.of(context).pushNamed("/SecondScreen");
               },
               child: Text("go to second screen"),
               style: ElevatedButton.styleFrom(
@@ -102,12 +95,7 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             OutlinedButton(
               onPressed: () {
-                Navigator.of(context).push(MaterialPageRoute(
-                    builder: (_) => BlocProvider.value(
-                          value: BlocProvider.of<CounterCubit>(context),
-                          child: ThirdScreen(
-                              title: "third Screen", colors: Colors.red),
-                        )));
+                Navigator.of(context).pushNamed("/ThirdScreen");
               },
               child: Text("go to third screen"),
             ),

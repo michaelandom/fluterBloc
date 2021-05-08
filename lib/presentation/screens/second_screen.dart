@@ -2,17 +2,17 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_block/logic/cubit/counter_cubit.dart';
 
-class ScreenScreen extends StatefulWidget {
-  ScreenScreen({Key key, this.title, this.colors}) : super(key: key);
+class SecondScreen extends StatefulWidget {
+  SecondScreen({Key key, this.title, this.colors}) : super(key: key);
 
   final String title;
   final Color colors;
 
   @override
-  _ScreenScreenState createState() => _ScreenScreenState();
+  _SecondScreenState createState() => _SecondScreenState();
 }
 
-class _ScreenScreenState extends State<ScreenScreen> {
+class _SecondScreenState extends State<SecondScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
