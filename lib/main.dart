@@ -6,6 +6,7 @@ import 'package:flutter_block/logic/cubit/internet_cubit.dart';
 import 'package:flutter_block/presentation/routes/router.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MyApp(
     connectivity: Connectivity(),
     appRouter: AppRouter(),

@@ -93,6 +93,14 @@ class _HomeScreenState extends State<HomeScreen> {
                 );
               },
             ),*/
+            Builder(
+              builder: (context) {
+                final counterStatus = context.watch<CounterCubit>().state;
+                final internetStatus = context.watch<InternetCubit>().state;
+                return Text(
+                    "counter: ${counterStatus.counterValue} internet: ${internetStatus is InternetConnected ? internetStatus.connectionType == ConnectionType.Wifi ? "Wifi" : "mobile" : "Disconnected"}");
+              },
+            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.spaceEvenly,
               children: [
